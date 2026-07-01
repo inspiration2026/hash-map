@@ -39,7 +39,7 @@ export class HashMap {
     }
 
     #resize() {
-        const tempArray = this.collectAllEntries();
+        const tempArray = this.#collectAllEntries();
 
         this.buckets =  [];
         this.createBuckets(this.capacity);
@@ -117,17 +117,17 @@ export class HashMap {
     }
 
     keys() {
-        const allEntries = this.collectAllEntries();
+        const allEntries = this.#collectAllEntries();
         return allEntries.map ((entry) => entry[0]);
     }
 
     values() {
-        const allEntries = this.collectAllEntries();
+        const allEntries = this.#collectAllEntries();
         return allEntries.map ((entry) => entry[1]);
     }
 
     entries() {
-        const allEntries = this.collectAllEntries();
+        const allEntries = this.#collectAllEntries();
         return allEntries;
     }
 
